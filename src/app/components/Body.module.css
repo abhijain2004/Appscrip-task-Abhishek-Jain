@@ -1,8 +1,9 @@
 .main {
   border-top: 1px solid #e5e5e5;
-  width: 94%;
+  width: 96vw;
   margin-left: auto;
   margin-right: auto;
+
 }
 
 .main1 {
@@ -75,7 +76,7 @@
   border-radius: 5px;
   position: absolute;
   top: 290px;
-  right: 60px;
+  right: 0px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
@@ -102,66 +103,4 @@
 
 .active {
   font-weight: 700;
-}
-
-/* Media Queries for Responsiveness */
-
-/* For smaller devices (tablets, 768px and smaller) */
-@media only screen and (max-width: 768px) {
-  .main1 {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .items, .itemsHiddenSidebar {
-    grid-template-columns: 1fr 1fr; /* Reduce number of columns */
-    margin-left: 0;
-    padding: 10px;
-  }
-
-  .dropdown {
-    top: 250px;
-    right: 30px;
-  }
-
-  .filter {
-    font-size: 16px;
-  }
-}
-
-/* For mobile devices (max-width 480px) */
-@media only screen and (max-width: 480px) {
-  .main1 {
-    margin: 0px 15px;
-  }
-
-  .heading {
-    font-size: 14px;
-    gap: 10px;
-  }
-
-  .hideFilter {
-    font-size: 12px;
-    gap: 5px;
-  }
-
-  .filter {
-    font-size: 14px;
-    gap: 5px;
-  }
-
-  .items, .itemsHiddenSidebar {
-    grid-template-columns: 1fr; /* Stack items in one column */
-    gap: 15px;
-  }
-
-  .dropdown {
-    top: 220px;
-    right: 20px;
-  }
-
-  .dropdown li {
-    font-size: 12px;
-  }
 }

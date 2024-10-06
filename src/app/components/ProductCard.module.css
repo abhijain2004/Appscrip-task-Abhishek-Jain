@@ -1,20 +1,81 @@
-.card{
-  width: 300px;
-  height: 462px;
+/* Base card styling */
+.card {
+  width: 100%; /* Make it flexible for responsiveness */
+  max-width: 250px; /* Set a maximum width */
+  height: 400px; /* Ensure consistent height across all cards */
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: 20px;
+  margin: 20px 40px; /* Center the card horizontally */
+  align-items: center;
 }
 
-.card-image{
-  margin-bottom: 10px;
-  width: 300px;
-  height: 350px;
+/* Image container */
+.card-image {
+  width: 100%; /* Make the image container responsive */
+  max-width: 250px;
+  height: 350px; /* Set a fixed height to make all images uniform */
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+  overflow: hidden; /* Hide any overflow from larger images */
 }
 
-.card-title{
+/* Image inside container */
+.card-image img {
+  width: 100%; /* Ensure the image scales within container */
+  height: 100%; /* Ensure the height fills the container */
+  object-fit: cover; /* Cover the area, cropping if necessary to maintain aspect ratio */
+}
+
+/* Card title */
+.card-title {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.card-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Responsive media queries */
+@media (max-width: 1285px) {
+  .card {
+    max-width: 250px; /* Reduce max width on tablets */
+    height: 350px; /* Adjust height accordingly */
+  }
+
+  .card-image {
+    max-width: 150px;
+    height: 200px; /* Adjust image height */
+  }
+
+  .card-title {
+    font-size: 14px; /* Adjust title size */
+  }
+
+  .card-footer {
+    font-size: 12px; /* Adjust footer size */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    max-width: 150px; /* Smaller max width for mobile devices */
+    height: 350px; /* Adjust height for smaller screens */
+  }
+
+  .card-image {
+    max-width: 150px;
+    height: 250px; /* Adjust image height */
+  }
+
+  .card-title {
+    font-size: 12px; /* Further adjust title size for small screens */
+  }
 }
